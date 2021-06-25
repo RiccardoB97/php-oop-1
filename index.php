@@ -29,5 +29,6 @@ class Movie
     }
 };
 
-
+$starWars = new Movie('Star Wars', 2021, 10, true);
+$topolino = new Movie('Topolino e pippo', 2010, 6);
 ?>
