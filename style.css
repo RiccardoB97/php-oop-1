@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.movie{
+    background-color: lightgray;
+    padding: 2rem;
+    margin: 1rem;
+    width: 50%;
+}

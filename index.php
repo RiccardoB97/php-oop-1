@@ -45,19 +45,22 @@ $movies = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie OOP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <?php foreach ($movies as $movie): ?>
-            <div class="movie">
-                <h1><?= $movie->title ?></h1>
-                <h2><?= $movie->yearOfRelease?></h2>
-                <h2><?= $movie->rating?></h2>
-                <?php if($movie->nowInCinemas):?>
-                    <h3>Now in all cinemas!</h3>
-                <?php endif; ?>
-            </div>
-        <?php endforeach; ?>
+        <div class="container">
+            <?php foreach ($movies as $movie): ?>
+                <div class="movie">
+                    <h1><?= $movie->title ?></h1>
+                    <h2><?= $movie->yearOfRelease?></h2>
+                    <h2><?= $movie->rating?></h2>
+                    <?php if($movie->nowInCinemas):?>
+                        <h3>Now in all cinemas!</h3>
+                    <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </main>    
 
 
