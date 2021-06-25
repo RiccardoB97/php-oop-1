@@ -18,10 +18,11 @@ class Movie
     public $rating;
     public $nowInCinemas = false;
 
-    function __construct(string $title, int $yearOfRelease, int $rating) {
+    function __construct(string $title, int $yearOfRelease, int $rating, bool $nowInCinemas) {
         $this->title = $title;
         $this->yearOfRelease = $yearOfRelease;
         $this->rating = $rating;
+        $this->nowInCinemas = $nowInCinemas;
     }
 
     public function getTitle() {
@@ -33,7 +34,7 @@ class Movie
 
 $movies = [
     new Movie('Star Wars', 2021, 10, true),
-    new Movie('Topolino e pippo', 2010, 6),
+    new Movie('Topolino e pippo', 2010, 6, true),
 ];
 ?>
 
@@ -47,8 +48,16 @@ $movies = [
 </head>
 <body>
     <main>
-
-
+        <?php foreach ($movies as $movie): ?>
+            <div class="movie">
+                <h1><?= $movie->title ?></h1>
+                <h2><?= $movie->yearOfRelease?></h2>
+                <h2><?= $movie->rating?></h2>
+                <?php if($movie->nowInCinemas):?>
+                    <h3>Now in all cinemas!</h3>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
     </main>    
 
 
